@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Dashboard</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">
+      <span class="logo-text">MyDashboard</span>
+    </div>
+    <nav>
+      <a href="#" class="active">🏠 <span class="link-text">Home</span></a>
+      <a href="#">📈 <span class="link-text">Analytics</span></a>
+      <a href="#">👥 <span class="link-text">Users</span></a>
+      <a href="#">⚙️ <span class="link-text">Settings</span></a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main">
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="nav-left">
+        <button id="toggleSidebar">☰</button>
+        <div class="search-wrapper">
+          <input type="text" id="searchInput" placeholder="Search users...">
+          <button class="search-icon">🔍</button>
+        </div>
+      </div>
+      <div class="nav-right">
+        <span>🔔</span>
+        <img src="https://i.pravatar.cc/40" alt="Profile" class="avatar">
+        <button id="modeToggle">🌙</button>
+      </div>
+    </header>
+
+    <!-- Stats Cards -->
+    <section class="cards">
+      <div class="card">Total Users <h2>1,200</h2></div>
+      <div class="card">Sales <h2>$34,000</h2></div>
+      <div class="card">Revenue <h2>$12,400</h2></div>
+      <div class="card">Active Projects <h2>18</h2></div>
+    </section>
+
+    <!-- Chart + User Section -->
+    <section class="content-grid">
+      <!-- Chart -->
+      <div class="chart">
+        <canvas id="myChart"></canvas>
+      </div>
+
+      <!-- Table -->
+      <div class="table-section">
+        <h3>User List</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th><th>Email</th><th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="userTable">
+            <tr><td>Ali Khan</td><td>ali@example.com</td><td>Active</td></tr>
+            <tr><td>Sara Ahmed</td><td>sara@example.com</td><td>Inactive</td></tr>
+            <tr><td>John Doe</td><td>john@example.com</td><td>Active</td></tr>
+            <tr><td>Ayesha Fatima</td><td>ayesha@example.com</td><td>Active</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
